@@ -113,7 +113,7 @@ const ItemDecryptorWindow: Component<PharcryptionWindowProps> = (props) => {
                                                 <td>{visible ? item.name : <span class="unknown">???</span>}</td>
                                                 <td style={{"text-align": "center"}}>{item.cost}</td>
                                                 <td>
-                                                    <Show when={purchasable} fallback={<div class="unknown" style={{"text-align": "center"}}>Not Decryptable</div>}>
+                                                    <Show when={purchasable && PharcryptionState.state.phase() !== GamePhase.POST_GAME} fallback={<div class="unknown" style={{"text-align": "center"}}>Not Decryptable</div>}>
                                                         <Show when={!item.unlocked} fallback={<div style={{color: "gray", "text-align": "center"}}>Decrypted</div>}>
                                                             <button 
                                                                 class="decrypt_button"
