@@ -1,9 +1,9 @@
 [package]
-name = "app"
-version = "0.1.0"
-description = "A Tauri App"
-authors = ["you"]
-license = ""
+name = "pharcryption"
+version = "0.8.0-beta4-1"
+description = "A meta-game client of Pharcryption for Archipelago mutliworlds"
+authors = ["phar"]
+license = "MIT"
 repository = ""
 edition = "2021"
 rust-version = "1.77.2"
