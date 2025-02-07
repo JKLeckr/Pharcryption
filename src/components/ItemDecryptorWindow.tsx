@@ -144,6 +144,12 @@ const ItemDecryptorWindow: Component<PharcryptionWindowProps> = (props) => {
 
 function attemptDecrypt(block: number, location: number, setLockButtons: Setter<boolean>) {
     setLockButtons(true);
+
+    if (PharcryptionState.state.phase() === GamePhase.POST_GAME) {
+        setLockButtons(false);
+        return;
+    }
+
     const pharcoinsAvailable = PharcryptionState.state.pharcoins() - PharcryptionState.state.spentPharcoins();
 
     if (pharcoinsAvailable >= PharcryptionState.state.itemDataTable()[block][location].cost) {
