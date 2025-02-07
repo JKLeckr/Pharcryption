@@ -1,6 +1,6 @@
 {
     "name": "pharcryption",
-    "version": "0.8.0_beta4",
+    "version": "0.8.0_beta4-1",
     "description": "A meta-game client of Pharcryption for Archipelago mutliworlds.",
     "scripts": {
         "start": "vite",
