@@ -75,14 +75,15 @@ const ItemDecryptorWindow: Component<PharcryptionWindowProps> = (props) => {
                                         let visible = false;
                                         let purchasable = false;
 
-                                        if (block() === 0) {
+                                        if (PharcryptionState.state.phase() === GamePhase.POST_GAME) {
+                                            visible = true;
+                                        }
+                                        else if (block() === 0) {
                                             visible = true;
                                             purchasable = true;
                                         } else if (PharcryptionState.state.decrypted()) {
                                             visible = true;
                                             purchasable = true;
-                                        } else if (PharcryptionState.state.phase() === GamePhase.POST_GAME) {
-                                            visible = true;
                                         } else {
                                             if (item.hinted) {
                                                 visible = true;
